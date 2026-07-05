@@ -330,15 +330,17 @@
   /* Strengths */
   .strengths-grid {
     margin-top: 48px;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 24px;
   }
+  .strength-card { flex: 0 1 100%; }
   @media (min-width: 640px) {
-    .strengths-grid { grid-template-columns: repeat(2, 1fr); }
+    .strength-card { flex: 0 1 calc((100% - 24px) / 2); }
   }
   @media (min-width: 1024px) {
-    .strengths-grid { grid-template-columns: repeat(3, 1fr); }
+    .strength-card { flex: 0 1 calc((100% - 48px) / 3); }
   }
   .strength-card {
     border-radius: 16px;
